@@ -50,7 +50,7 @@ if (subIDs) {
 
       if (changes && changes.length > 0) {
         changes.forEach((x) => {
-          if (x.propertyChanges && x.propertyChanges.toString() != "undefined") {
+          if (x.propertyChanges && x.propertyChanges !== undefined) {
             console.log(x.propertyChanges);
           }
         });
@@ -62,3 +62,5 @@ if (subIDs) {
 } else {
   console.log("could not find subs");
 }
+
+console.log("changes logging done");
