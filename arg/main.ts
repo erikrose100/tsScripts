@@ -6,13 +6,15 @@ const credential = new DefaultAzureCredential();
 const subscriptionClient = new SubscriptionClient(credential);
 const resourceGraphClient = new ResourceGraphClient(credential);
 
-async function getAllSubscriptions(): Promise<string | undefined> {
+async function getAllSubscriptions(): Promise<string[] | undefined> {
+  const subIDs: string[] = [];
   try {
     const subscriptions = subscriptionClient.subscriptions.list();
     for await (const subscription of subscriptions) {
       console.log(subscription.displayName);
-      return subscription.subscriptionId;
+      subIDs.push(subscription.subscriptionId!);
     }
+    return subIDs;
   } catch (error) {
     console.error("An error occurred:", error);
     throw error;
@@ -21,7 +23,13 @@ async function getAllSubscriptions(): Promise<string | undefined> {
 const subIDs = await getAllSubscriptions().catch((err) => {
   console.error("An error occurred:", err);
 });
-console.log(subIDs?.toString());
+if (subIDs) {
+  for (const id of subIDs) {
+    console.log(id.toString());
+  }
+} else {
+  console.log("could not find subs");
+}
 console.log("done");
 
 const now = Date.now();
@@ -37,4 +45,4 @@ const result = await resourceGraphClient.resourceChanges({
 
 const changes = result.changes;
 
-console.log(changes?.forEach( x => (console.log(x.propertyChanges))));
+console.log(changes?.forEach((x) => (console.log(x.propertyChanges))));
