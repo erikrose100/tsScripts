@@ -34,6 +34,13 @@ console.log("done");
 
 const now = Date.now();
 
+// consider parallelizing the resourceGraphClient.resourceChanges calls
+// using Promise.all to improve performance
+// be mindful of API throttling
+
+// filter the resource changes
+// to retrieve only the data you need
+
 if (subIDs) {
   for (const id of subIDs) {
     try {
@@ -50,7 +57,7 @@ if (subIDs) {
 
       if (changes && changes.length > 0) {
         changes.forEach((x) => {
-          if (x.propertyChanges && x.propertyChanges !== undefined) {
+          if (x.propertyChanges !== undefined) {
             console.log(x.propertyChanges);
           }
         });
