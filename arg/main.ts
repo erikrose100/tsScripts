@@ -30,7 +30,6 @@ if (subIDs) {
 } else {
   console.log("could not find subs");
 }
-console.log("done");
 
 const now = Date.now();
 
