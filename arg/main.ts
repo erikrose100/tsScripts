@@ -34,16 +34,12 @@ console.log("done");
 
 const now = Date.now();
 
-// consider parallelizing the resourceGraphClient.resourceChanges calls
-// using Promise.all to improve performance
-// be mindful of API throttling
-
 if (subIDs) {
-  for (const id of subIDs) {
+  const promises = subIDs.map(async (id) => {
     try {
       const result = await resourceGraphClient.resourceChanges({
         interval: {
-          start: new Date(now - (24 * 60 * 60 * 1000)), // now -24 hrs
+          start: new Date(now - 24 * 60 * 60 * 1000), // now -24 hrs
           end: new Date(now),
         },
         fetchPropertyChanges: true,
@@ -61,10 +57,11 @@ if (subIDs) {
       }
     } catch (error) {
       console.error(`Error processing subscription ID ${id}:`, error);
+      console.error(error);
     }
-  }
-} else {
-  console.log("could not find subs");
+  });
+
+  await Promise.all(promises);
 }
 
 console.log("changes logging done");
