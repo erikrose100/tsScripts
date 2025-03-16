@@ -38,9 +38,6 @@ const now = Date.now();
 // using Promise.all to improve performance
 // be mindful of API throttling
 
-// filter the resource changes
-// to retrieve only the data you need
-
 if (subIDs) {
   for (const id of subIDs) {
     try {
@@ -71,3 +68,4 @@ if (subIDs) {
 }
 
 console.log("changes logging done");
+Deno.exit();
