@@ -1,3 +1,4 @@
+import { parseArgs } from "jsr:@std/cli/parse-args";
 
 async function fetchAndProcess(list: string[]) {
   try {
@@ -39,10 +40,23 @@ async function fetchAndProcess(list: string[]) {
   }
 }
 
-const urlList: string[] = [
-  "https://raw.githubusercontent.com/microsoft/json-schemas/refs/heads/main/dotnet/target-framework-moniker.schema.json",
-  "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
-  "https://raw.githubusercontent.com/microsoft/json-schemas/refs/heads/main/rush/rush.schema.json",
-];
+// const args = parseArgs(["--foo", "bar", "--foo", "baz"], {
+//   collect: ["foo"],
+//  });
 
-fetchAndProcess(urlList);
+const args = parseArgs(Deno.args, {
+  string: ["url"],
+  collect: ["url"],
+});
+
+for (const url of args.url) {
+  console.log(`url: ${url}`)
+}
+
+// const urlList: string[] = [
+//   "https://raw.githubusercontent.com/microsoft/json-schemas/refs/heads/main/dotnet/target-framework-moniker.schema.json",
+//   "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
+//   "https://raw.githubusercontent.com/microsoft/json-schemas/refs/heads/main/rush/rush.schema.json",
+// ];
+
+// fetchAndProcess(urlList);
