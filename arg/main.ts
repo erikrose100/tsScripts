@@ -20,7 +20,9 @@ async function getAllSubscriptions(): Promise<string[] | undefined> {
     throw error;
   }
 }
-const subIDs = await getAllSubscriptions().catch((err) => {
+
+const subVar = Deno.env.get("SUBSCRIPTION_LIST");
+const subIDs = subVar !== null && subVar !== undefined ? subVar.split(',') : await getAllSubscriptions().catch((err) => {
   console.error("An error occurred:", err);
 });
 if (subIDs) {
