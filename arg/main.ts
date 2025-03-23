@@ -21,14 +21,23 @@ async function getAllSubscriptions(): Promise<string[] | undefined> {
   }
 }
 
-const subVar = Deno.env.get("SUBSCRIPTION_LIST");
-const subIDs = subVar !== null && subVar !== undefined ? subVar.split(',') : await getAllSubscriptions().catch((err) => {
-  console.error("An error occurred:", err);
-});
-if (subIDs) {
-  for (const id of subIDs) {
-    console.log(id.toString());
+const subVar: string | null | undefined = Deno.env.get("SUBSCRIPTION_LIST");
+let subIDs: string[] | undefined;
+
+if (subVar) {
+  subIDs = subVar.split(',');
+} else {
+  try {
+    subIDs = await getAllSubscriptions();
+  } catch (err) {
+    console.error("An error occurred:", err);
+    console.log("could not find subs");
+    subIDs = undefined;
   }
+}
+
+if (subIDs) {
+  subIDs.forEach((id: string) => console.log(id));
 } else {
   console.log("could not find subs");
 }
