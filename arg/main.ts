@@ -21,7 +21,7 @@ async function getAllSubscriptions(): Promise<string[] | undefined> {
   }
 }
 
-const subVar: string | null | undefined = Deno.env.get("SUBSCRIPTION_LIST");
+const subVar: string | null | undefined = Deno.env.get("AZ_SUBSCRIPTION_LIST");
 let subIDs: string[] | undefined;
 
 if (subVar) {
