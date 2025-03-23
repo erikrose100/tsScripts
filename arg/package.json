@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@azure/arm-resourcegraph": "^4.2.1",
-    "@azure/arm-resources-subscriptions": "^2.1.0",
-    "@azure/identity": "^4.7.0"
-  }
-}
