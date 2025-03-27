@@ -3,6 +3,8 @@ arg/node_modules/
 **/node_modules/
 node_modules/
 .node_modules/
+.vscode
+.vscode/*
 built/*
 tests/cases/rwc/*
 tests/cases/perf/*
