@@ -11,9 +11,7 @@ RUN deno cache main.ts
 
 FROM denoland/deno:2.2.5
 
-COPY --from=build /app /app
-
-WORKDIR /app
+COPY --from=build /app .
 
 # ENV AZ_SUBSCRIPTION_LIST="GUID,GUID"
 
