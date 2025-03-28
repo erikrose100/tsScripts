@@ -15,6 +15,8 @@ COPY --from=build /app .
 
 # ENV AZ_SUBSCRIPTION_LIST="GUID,GUID"
 
+WORKDIR /arg
+
 # Run the app
 CMD ["deno", "run", \
     "--allow-read", \
