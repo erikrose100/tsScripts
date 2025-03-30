@@ -59,7 +59,6 @@
 // //   "https://raw.githubusercontent.com/microsoft/json-schemas/refs/heads/main/rush/rush.schema.json",
 // // ];
 
-// // fetchAndProcess(urlList);
 
 type AType = {
   name: string;
@@ -71,11 +70,7 @@ type BType = {
   values: number[];
 };
 
-type DU = AType | BType;
-
-type OutTupleResult<T> =
-  | { type: "success"; value: T }
-  | { type: "error"; message: string };
+type DU = AType | BType | string;
 
 function isAType(input: DU): input is AType {
   return (
@@ -93,74 +88,28 @@ function isBType(input: DU): input is BType {
   );
 }
 
-// Higher-order function to create a type-specific extractor
-function createTupleValueExtractor<T extends DU, R>(
-  typeGuard: (input: DU) => input is T,
-  extractor: (input: T) => R
-): (input: DU) => OutTupleResult<R> {
-  return (input: DU) => {
-      if (typeGuard(input)) {
-          return { type: "success", value: extractor(input) };
-      } else {
-          return { type: "error", message: "Input does not match expected type." };
-      }
-  };
-}
-
-// Higher-order function to handle the OutTupleResult
-function handleTupleResult<T>(
-  result: OutTupleResult<T>,
-  onSuccess: (value: T) => void,
-  onError?: (message: string) => void
-): void {
-  if (result.type === "success") {
-      onSuccess(result.value);
-  } else if (result.type === "error" && onError) {
-      onError(result.message);
-  } else if (result.type === "error") {
-      console.error("Error:", result.message);
-  }
-}
-
-// Higher-order function to try multiple extractors
-function tryExtractValue<T>(
-  input: DU,
-  extractors: Array<(input: DU) => OutTupleResult<T>>
-): OutTupleResult<T> {
-  for (const extractor of extractors) {
-      const result = extractor(input);
-      if (result.type === "success") {
-          return result;
-      }
-  }
-  return { type: "error", message: "Could not extract value using any provided extractor" };
-}
-
-// Create specific extractors using the higher-order function
-const getName = createTupleValueExtractor(isAType, (aType) => aType.name);
-const getJoinedValues = createTupleValueExtractor(isBType, (bType) => bType.values.join());
-
 const tuple: DU[] = [
   { name: "User A", value: 10, properties: ["prop1"] },
   { values: [1, 2, 3] },
   { name: "User B", value: 20, properties: ["prop2", "prop3"] },
-  { values: [4, 5] }
+  { values: [4, 5] },
+  "NotAUser"
 ];
 
-tuple.forEach((item) => {
-  // Example using handleTupleResult with specific extractors
-  handleTupleResult(getName(item), (name) => console.log(`Name: ${name}`), () => {});
-  handleTupleResult(getJoinedValues(item), (values) => console.log(`Values: ${values}`), () => {});
+function exhaustiveCheck(param: never): never {
+  throw new Error(`Unhandled case: ${JSON.stringify(param)}`);
+}
 
-  console.log("---");
+const extractValue = (input: DU): string => {
+  if (isAType(input)) {
+    return `AType - Name: ${input.name}`;
+  } else if (isBType(input)) {
+    return `BType - Values: ${input.values.join(", ")}`;
+  } else if (typeof input === "string") {
+    return `String - ${input}`;
+  } else {
+    return exhaustiveCheck(input); // Enforces handling of all DU types
+  }
+};
 
-  // Example using tryExtractValue to attempt both extractions
-  const extractionResult = tryExtractValue(item, [getName, getJoinedValues]);
-  handleTupleResult(
-      extractionResult,
-      (value) => console.log(`Extracted value (tryExtractValue): ${value}`),
-      (error) => console.error(`Extraction failed (tryExtractValue): ${error}`)
-  );
-
-  console.log("===");
-});
+tuple.forEach((item) => console.log(extractValue(item)));
