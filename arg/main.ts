@@ -93,14 +93,22 @@ if (subIDs) {
       const changes = result.changes;
 
       if (changes && changes.length > 0) {
-
-        const changesResourceIds = changes.flatMap(x => x.resourceId ? [`"${x.resourceId}"`] : []).join(',');
-        const afterSnapshotIds = changes.flatMap(x => x.afterSnapshot.snapshotId ? [`"${x.afterSnapshot.snapshotId}"`] : []).join(',');
-        const beforeSnapshotIds = changes.flatMap(x => x.beforeSnapshot.snapshotId ? [`"${x.beforeSnapshot.snapshotId}"`] : []).join(',');
+        const changesResourceIds = changes.flatMap((x) =>
+          x.resourceId ? [`"${x.resourceId}"`] : []
+        ).join(",");
+        const afterSnapshotIds = changes.flatMap((x) =>
+          x.afterSnapshot.snapshotId ? [`"${x.afterSnapshot.snapshotId}"`] : []
+        ).join(",");
+        const beforeSnapshotIds = changes.flatMap((x) =>
+          x.beforeSnapshot.snapshotId
+            ? [`"${x.beforeSnapshot.snapshotId}"`]
+            : []
+        ).join(",");
         resourceGraphClient.resources({
-          query: `"resourcechanges | where dynamic([${changesResourceIds}]) contains properties.targetResourceId | where dynamic([${changesResourceIds}]) contains properties.targetResourceId"`,
-          subscriptions: [id.toString()]
-        })
+          query:
+            `"resourcechanges | where dynamic([${changesResourceIds}]) contains properties.targetResourceId | where dynamic([${changesResourceIds}]) contains properties.targetResourceId"`,
+          subscriptions: [id.toString()],
+        });
         for (const x of changes) {
           try {
             // const resourceChanges = changesAnalysisClient.resourceChanges.list(
