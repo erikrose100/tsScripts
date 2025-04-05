@@ -3,6 +3,8 @@
   "specifiers": {
     "jsr:@std/assert@1": "1.0.11",
     "jsr:@std/internal@^1.0.5": "1.0.5",
+    "npm:@azure/arm-changeanalysis@^2.1.0": "2.1.0",
+    "npm:@azure/arm-changes@^1.1.0": "1.1.0",
     "npm:@azure/arm-resourcegraph@^4.2.1": "4.2.1",
     "npm:@azure/arm-resources-subscriptions@^2.1.0": "2.1.0",
     "npm:@azure/identity@^4.8.0": "4.8.0"
@@ -22,6 +24,26 @@
     "@azure/abort-controller@2.1.2": {
       "integrity": "sha512-nBrLsEWm4J2u5LpAPjxADTlq3trDgVZZXHNKabeXZtpq3d3AbN/KGO82R87rdDz5/lYB024rtEf10/q0urNgsA==",
       "dependencies": [
+        "tslib@2.8.1"
+      ]
+    },
+    "@azure/arm-changeanalysis@2.1.0": {
+      "integrity": "sha512-uNXtqL+CW+0xv8NU9OjfJo4mPntLIsn/tPFeEuhZY9ywwL5ozIiicI0E23JMYNvMQthwq4u6Uw6/ZKH29LvCKg==",
+      "dependencies": [
+        "@azure/core-auth",
+        "@azure/core-client",
+        "@azure/core-paging",
+        "@azure/core-rest-pipeline",
+        "tslib@2.8.1"
+      ]
+    },
+    "@azure/arm-changes@1.1.0": {
+      "integrity": "sha512-r3o/CiUiB2HE+a1tqSK4elWBwJoSk4owsC86nknSJDIzvqndtlQWOs0o5/EOnhWJ7eqjtdGLnx0AtH4jI0d7dg==",
+      "dependencies": [
+        "@azure/core-auth",
+        "@azure/core-client",
+        "@azure/core-paging",
+        "@azure/core-rest-pipeline",
         "tslib@2.8.1"
       ]
     },
@@ -488,6 +510,8 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1",
+      "npm:@azure/arm-changeanalysis@^2.1.0",
+      "npm:@azure/arm-changes@^1.1.0",
       "npm:@azure/arm-resourcegraph@^4.2.1",
       "npm:@azure/arm-resources-subscriptions@^2.1.0",
       "npm:@azure/identity@^4.8.0"

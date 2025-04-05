@@ -1,4 +1,4 @@
-// import { parseArgs } from "jsr:@std/cli/parse-args";
+import { parseArgs } from "jsr:@std/cli/parse-args";
 
 // async function fetchAndProcess(list: string[]) {
 //   try {
@@ -40,9 +40,9 @@
 //   }
 // }
 
-// // const args = parseArgs(["--foo", "bar", "--foo", "baz"], {
-// //   collect: ["foo"],
-// //  });
+// const args = parseArgs(["--foo", "bar", "--foo", "baz"], {
+//   collect: ["foo"],
+//  });
 
 // const args = parseArgs(Deno.args, {
 //   string: ["url"],
@@ -53,12 +53,11 @@
 //   console.log(`url: ${url}`)
 // }
 
-// // const urlList: string[] = [
-// //   "https://raw.githubusercontent.com/microsoft/json-schemas/refs/heads/main/dotnet/target-framework-moniker.schema.json",
-// //   "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
-// //   "https://raw.githubusercontent.com/microsoft/json-schemas/refs/heads/main/rush/rush.schema.json",
-// // ];
-
+const urlList: string[] = [
+  "https://raw.githubusercontent.com/microsoft/json-schemas/refs/heads/main/dotnet/target-framework-moniker.schema.json",
+  "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
+  "https://raw.githubusercontent.com/microsoft/json-schemas/refs/heads/main/rush/rush.schema.json",
+];
 
 type AType = {
   name: string;
@@ -113,3 +112,25 @@ const extractValue = (input: DU): string => {
 };
 
 tuple.forEach((item) => console.log(extractValue(item)));
+
+const responses = await Promise.all(
+  urlList.map(async (uri) => {
+    const response = await fetch(uri);
+    return response;
+  })
+)
+
+responses.forEach(x => {
+  if (x.ok) {
+    console.log("succesful response:");
+    console.log(x.json());
+  }
+  else if (!x.ok) {
+    console.log("unsuccessful response:");
+    console.log(`status code: ${x.status}`);
+  }
+  else { 
+    return exhaustiveCheck(x.ok);
+  }
+})
+

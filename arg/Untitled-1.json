@@ -1,0 +1,505 @@
+{
+  "resourceId": "/subscriptions/913575a3-f8f6-4972-91e3-4d69586885ef/resourceGroups/Container-Resources/providers/Microsoft.App/containerApps/cloudflared",
+  "changeId": "{\"beforeId\":\"1fb56832-0a67-43f2-8fa7-cfd8e629b1f2\",\"beforeTime\":\"2025-04-02T10:43:56.617Z\",\"afterId\":\"3099e2cb-e05e-42e4-ab4b-cd3585bf2cc6\",\"afterTime\":\"2025-04-03T16:43:53.41Z\"}",
+  "beforeSnapshot": {
+    "snapshotId": "1fb56832-0a67-43f2-8fa7-cfd8e629b1f2",
+    "timestamp": "2025-04-02T10:43:56.617Z"
+  },
+  "afterSnapshot": {
+    "snapshotId": "3099e2cb-e05e-42e4-ab4b-cd3585bf2cc6",
+    "timestamp": "2025-04-03T16:43:53.410Z"
+  },
+  "changeType": "Update",
+  "propertyChanges": [
+    {
+      "propertyName": "properties.outboundIpAddresses[0]",
+      "beforeValue": "20.161.138.86",
+      "afterValue": "128.85.236.131",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[1]",
+      "beforeValue": "20.161.137.24",
+      "afterValue": "128.85.236.125",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[2]",
+      "beforeValue": "4.153.72.251",
+      "afterValue": "128.85.236.148",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[3]",
+      "beforeValue": "4.153.73.13",
+      "afterValue": "128.85.236.210",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[4]",
+      "beforeValue": "4.153.73.38",
+      "afterValue": "128.85.236.235",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[5]",
+      "beforeValue": "4.153.72.240",
+      "afterValue": "128.85.237.2",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[6]",
+      "beforeValue": "4.153.73.30",
+      "afterValue": "128.85.236.220",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[7]",
+      "beforeValue": "4.153.72.243",
+      "afterValue": "128.85.236.177",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[8]",
+      "beforeValue": "4.153.73.23",
+      "afterValue": "128.85.236.182",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[9]",
+      "beforeValue": "4.153.72.247",
+      "afterValue": "128.85.236.159",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[10]",
+      "beforeValue": "4.153.73.6",
+      "afterValue": "20.97.130.219",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[11]",
+      "beforeValue": "4.153.73.37",
+      "afterValue": "20.69.200.68",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[12]",
+      "beforeValue": "20.161.137.25",
+      "afterValue": "52.167.135.54",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[13]",
+      "beforeValue": "52.184.192.104",
+      "afterValue": "52.184.149.238",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[14]",
+      "beforeValue": "52.177.123.74",
+      "afterValue": "52.179.250.88",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[15]",
+      "beforeValue": "52.177.123.175",
+      "afterValue": "52.184.149.147",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[16]",
+      "beforeValue": "52.177.123.148",
+      "afterValue": "52.184.198.180",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[17]",
+      "beforeValue": "52.177.123.136",
+      "afterValue": "52.184.138.179",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[18]",
+      "beforeValue": "52.177.123.98",
+      "afterValue": "52.179.253.112",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[19]",
+      "beforeValue": "52.177.123.102",
+      "afterValue": "52.184.190.79",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[20]",
+      "beforeValue": "52.177.123.125",
+      "afterValue": "52.184.141.185",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[21]",
+      "beforeValue": "52.177.123.90",
+      "afterValue": "52.184.151.206",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[22]",
+      "beforeValue": "52.177.123.69",
+      "afterValue": "20.97.132.38",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[23]",
+      "beforeValue": "20.161.138.87",
+      "afterValue": "20.97.133.137",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[24]",
+      "beforeValue": "20.122.82.135",
+      "afterValue": "20.94.122.99",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[25]",
+      "beforeValue": "172.177.177.115",
+      "afterValue": "20.94.122.65",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[26]",
+      "beforeValue": "20.122.82.26",
+      "afterValue": "20.94.122.133",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[27]",
+      "beforeValue": "20.122.82.51",
+      "afterValue": "20.94.122.111",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[28]",
+      "beforeValue": "20.122.81.165",
+      "afterValue": "20.94.122.70",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[29]",
+      "beforeValue": "20.122.82.63",
+      "afterValue": "20.94.122.101",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[30]",
+      "beforeValue": "20.122.81.203",
+      "afterValue": "20.161.138.86",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[31]",
+      "beforeValue": "172.177.180.194",
+      "afterValue": "20.161.137.24",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[32]",
+      "beforeValue": "20.122.81.254",
+      "afterValue": "4.153.72.251",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[33]",
+      "beforeValue": "20.122.82.103",
+      "afterValue": "4.153.73.13",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[34]",
+      "beforeValue": "4.153.106.247",
+      "afterValue": "4.153.73.38",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[35]",
+      "beforeValue": "4.153.107.93",
+      "afterValue": "4.153.72.240",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[36]",
+      "beforeValue": "4.153.108.180",
+      "afterValue": "4.153.73.30",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[37]",
+      "beforeValue": "4.153.107.3",
+      "afterValue": "4.153.72.243",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[38]",
+      "beforeValue": "4.153.110.115",
+      "afterValue": "4.153.73.23",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[39]",
+      "beforeValue": "4.153.108.140",
+      "afterValue": "4.153.72.247",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[40]",
+      "beforeValue": "128.85.236.131",
+      "afterValue": "4.153.73.6",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[41]",
+      "beforeValue": "128.85.236.125",
+      "afterValue": "4.153.73.37",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[42]",
+      "beforeValue": "128.85.236.148",
+      "afterValue": "20.161.137.25",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[43]",
+      "beforeValue": "128.85.236.210",
+      "afterValue": "52.184.192.104",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[44]",
+      "beforeValue": "128.85.236.235",
+      "afterValue": "52.177.123.74",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[45]",
+      "beforeValue": "128.85.237.2",
+      "afterValue": "52.177.123.175",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[46]",
+      "beforeValue": "128.85.236.220",
+      "afterValue": "52.177.123.148",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[47]",
+      "beforeValue": "128.85.236.177",
+      "afterValue": "52.177.123.136",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[48]",
+      "beforeValue": "128.85.236.182",
+      "afterValue": "52.177.123.98",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[49]",
+      "beforeValue": "128.85.236.159",
+      "afterValue": "52.177.123.102",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[50]",
+      "beforeValue": "20.97.130.219",
+      "afterValue": "52.177.123.125",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[51]",
+      "beforeValue": "20.69.200.68",
+      "afterValue": "52.177.123.90",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[52]",
+      "beforeValue": "52.167.135.54",
+      "afterValue": "52.177.123.69",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[53]",
+      "beforeValue": "52.184.149.238",
+      "afterValue": "20.161.138.87",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[54]",
+      "beforeValue": "52.179.250.88",
+      "afterValue": "20.122.82.135",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[55]",
+      "beforeValue": "52.184.149.147",
+      "afterValue": "172.177.177.115",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[56]",
+      "beforeValue": "52.184.198.180",
+      "afterValue": "20.122.82.26",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[57]",
+      "beforeValue": "52.184.138.179",
+      "afterValue": "20.122.82.51",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[58]",
+      "beforeValue": "52.179.253.112",
+      "afterValue": "20.122.81.165",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[59]",
+      "beforeValue": "52.184.190.79",
+      "afterValue": "20.122.82.63",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[60]",
+      "beforeValue": "52.184.141.185",
+      "afterValue": "20.122.81.203",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[61]",
+      "beforeValue": "52.184.151.206",
+      "afterValue": "172.177.180.194",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[62]",
+      "beforeValue": "20.97.132.38",
+      "afterValue": "20.122.81.254",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[63]",
+      "beforeValue": "20.97.133.137",
+      "afterValue": "20.122.82.103",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[64]",
+      "beforeValue": "20.94.122.99",
+      "afterValue": "4.153.106.247",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[65]",
+      "beforeValue": "20.94.122.65",
+      "afterValue": "4.153.107.93",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[66]",
+      "beforeValue": "20.94.122.133",
+      "afterValue": "4.153.108.180",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[67]",
+      "beforeValue": "20.94.122.111",
+      "afterValue": "4.153.107.3",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[68]",
+      "beforeValue": "20.94.122.70",
+      "afterValue": "4.153.110.115",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    },
+    {
+      "propertyName": "properties.outboundIpAddresses[69]",
+      "beforeValue": "20.94.122.101",
+      "afterValue": "4.153.108.140",
+      "changeCategory": "User",
+      "propertyChangeType": "Update"
+    }
+  ]
+}
